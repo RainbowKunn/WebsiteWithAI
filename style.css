@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: 'Archetype';
+  src: url('/fonts/Lora-VariableFont_wght.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+strong {
+  font-weight: bold;
+}
+.page {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.page1 {
+  background-image: url('1.png');
+}
+
+.page2 {
+  background-image: url('2.png');
+}
+
+.page3 {
+  background-image: url('3.png');
+}
+
+.page4 {
+  background-image: url('4.png');
+}
+
+.page-content {
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.image-container {
+  width: 50%;
+  text-align: center;
+  padding-left: 30rem;
+}
+
+.text-box {
+  font-family: 'Archetype', sans-serif;
+  width: 50%;
+  background-color: #808080;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  border-radius: 10px;
+  padding: 20px;
+  color: #FFFFFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.text-box::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom right, #808080, #660066);
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.image-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rounded-image {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  transition: transform 0.2s;
+}
+
+.rounded-image:hover {
+  transform: scale(1.1);
+}
+.scroll-button {
+  /* Butonun şeklini ve rengini ayarlayın */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  /* Roket imgesini ekleyin */
+  background-image: url(rocket.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+}
+.scroll-button-container {
+  margin-top: 5rem;
+  text-align: center;
+}
+.scroll-button-container2 {
+  margin-top: 2rem;
+  text-align: center;
+}
+.discord-frame {
+  position:relative;
+  justify-content: right;
+  text-align: left;
+  top: 20rem;
+  margin-left: 20rem;
+}
+
+.discord-textbox {
+  font-family: 'Archetype', sans-serif;
+  width: 40%;
+  position:relative;
+  background-color: #808080;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 2rem;
+  margin-left: 80rem;
+  color: #FFFFFF;
+  justify-content: right;
+  transform: translate(-50%, -50%);
+}
+.logo-image {
+  position: absolute;
+  width: 40%;
+  padding-left: 14rem;
+  top: -20rem;
+  left: 0;
+}
+
+.teams-section {
+  
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  /* tüm takım bölümünü orta hizalar */
+}
+
+.teams-section-logo {
+  width: 13%;
+
+  /* logo yarım sayfa genişliğinde */
+}
+
+.teams-section-logo img {
+  width: 100%;
+  /* logo resmi tam sayfa genişliğinde */
+}
+
+.teams-section-members {
+  width: 100%;
+  /* takım üyeleri tam sayfa genişliğinde */
+}
+
+.teams-section-member {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* takım üyelerinin resmi ve yazısı orta hizalı */
+}
+
+.teams-section-member-image {
+  
+  width: 10%;
+  /* takım üyesi resmi %10 genişliğinde */
+}
+
+.teams-section-member-image img {
+  
+  width: 110%;
+  margin: -2rem;
+  /* takım üyesi resmi tam genişliğinde */
+}
+
+.teams-section-member-description {
+
+  width: 70%;
+  padding: 20px;  /* yazı box'ı içindeki boşluk */
+  background-color: #f2f2f2;  /* yazı box'ının arkaplan rengi */
+  border-radius: 30px;  /* yazı box'ının köşeleri yuvarlatılır */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);  /* yazı box'ına gölge efekti */
+  /* yazı box'ının gradient rengi */
+  background: linear-gradient(to bottom right, #808080, #660066);
+  font-size: 18px;
+}
+
+.teams-section-member:nth-of-type(odd) .teams-section-member-image {
+  /* tek sayılı takım üyelerinin resmi */
+  order: -1;
+  /* sağ tarafına */
+}
+
+.teams-section-member:nth-of-type(even) .teams-section-member-image {
+  /* çift sayılı takım üyelerinin resmi */
+  order: 1;
+  /* sol tarafına */
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #282828;
+  color: #fafafa;
+  height: 70px;
+  width: 100%;
+
+  bottom: 0;
+  border-top: 1px solid #ff0000;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.footer-nav a {
+  color: #fafafa;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.footer-copyright {
+  color: #fafafa;
+  font-size: 14px;
+  margin-right: 12rem;
+}
+
+.footer-social-media {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.footer-social-media img {
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
+}
